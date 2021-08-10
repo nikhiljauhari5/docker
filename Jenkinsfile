@@ -1,5 +1,9 @@
+#!groovy
+
 pipeline {
-   agent docker
+  agent {
+       label 'docker'
+  }
   stages {
 
     stage('Docker Build and Run Tests') {
